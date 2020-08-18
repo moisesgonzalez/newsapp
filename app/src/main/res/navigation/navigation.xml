@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/topHeadLinesFragment"
+    android:id="@+id/navigation">
+    <!-- The complete game fragment within the navigation XML, complete with tools:layout. -->
+    <fragment
+        android:id="@+id/topHeadLinesFragment"
+        android:name="com.example.newsapp.ui.TopHeadLinesFragment"
+        android:label="Top Headlines"
+        tools:layout="@layout/fragment_top_head_lines" >
+        <action
+            android:id="@+id/action_topHeadLinesFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_topHeadLinesFragment_to_detailArticleFragment"
+            app:destination="@id/detailArticleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.newsapp.ui.SearchFragment"
+        android:label="Search news"
+        tools:layout="@layout/search_fragment">
+        <action
+            android:id="@+id/action_searchFragment_to_detailArticleFragment"
+            app:destination="@id/detailArticleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailArticleFragment"
+        android:name="com.example.newsapp.ui.DetailArticleFragment"
+        android:label="Detailed Information"
+        tools:layout="@layout/fragment_detail_article">
+        <argument
+            android:name="selectedArticle"
+            app:argType="com.example.newsapp.domain.Article"/>
+    </fragment>
+
+</navigation>

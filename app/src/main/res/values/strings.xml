@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">NewsApp</string>
+    <string name="API_KEY">ede58ebc84324f6684b9e5229b988ca7</string>
+
+    <string name="title_top">Top News</string>
+    <string name="menu_search">Search</string>
+    <string name="search_news">Search topics and articles</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
